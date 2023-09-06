@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 5rem;
+  background-color: #222;
+}
+
+.box {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    gap: 20px;
+    font-size: 1.5rem;
+    height: 5rem;
+    text-decoration: none;
+    background-color: transparent;
+    color: #FCC600;
+    text-shadow: 2px 2px #0331D0;
+    cursor: pointer;
+    transition: .4s;
+
+    img {
+      width: 150px;
+    }
+  }
+
+  a:hover {
+    filter: brightness(1.1);
+  }
+}
