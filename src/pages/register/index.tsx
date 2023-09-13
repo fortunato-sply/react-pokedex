@@ -18,8 +18,7 @@ export default function RegisterPage() {
 
     var dataEncrypted = CryptoJS.AES.encrypt(JSON.stringify(data), SECRET).toString();
     try {
-      //await axios.post('http://localhost:8080/register', {dataEncrypted: dataEncrypted});
-      console.log(dataEncrypted);
+      await axios.post('http://localhost:8080/register', {dataEncrypted: dataEncrypted});
       navigate('/');
     } catch (err) {
       console.log(err);

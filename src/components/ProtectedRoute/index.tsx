@@ -18,8 +18,8 @@ export default function ProtectedRoute({ errorPage, targetPage }: ProtectedRoute
     }
 
     const decodedToken = jwt_decode<JwtPayload>(token);
-
-    if((decodedToken?.exp as number) < new Date().getTime()) {
+    
+    if(Number((decodedToken?.exp as number).toString()+'000') - new Date().getTime() < 0) {
       setPage(errorPage);
       return;
     }
